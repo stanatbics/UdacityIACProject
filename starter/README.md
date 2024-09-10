@@ -3,11 +3,13 @@
 
 ## Spin up instructions
 ./main.sh create us-east-1 StanNetworkInfra network.yml network-parameters.json
+
 ./main.sh create us-east-1 StanAppInfra udagram.yml udagram-parameters.json
 
 ## Tear down instructions
 Emptying s3 bucket
 ./main.sh delete us-east-1 StanAppInfra
+
 ./main.sh delete us-east-1 StanNetworkInfra
 
 ## Other considerations
