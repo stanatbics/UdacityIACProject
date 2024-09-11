@@ -14,5 +14,5 @@ Emptying s3 bucket
 
 ## Other considerations
 - added diagram - infrastructure_diagram.png
-- Deployed index.html as a static content using cloudfront - https://d1wljpz4ytafgq.cloudfront.net/
-- Load Balancer Public URL - http://stanap-webap-2gjqfsa5b6tv-1166497746.us-east-1.elb.amazonaws.com/
+- Deployed index.html as a static content using cloudfront - http://d1x4s4fyb468yw.cloudfront.net/
+- Load Balancer Public URL - http://stanap-webap-txnajqprnktf-1079223550.us-east-1.elb.amazonaws.com/
