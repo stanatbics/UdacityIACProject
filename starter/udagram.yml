@@ -16,6 +16,15 @@ Resources:
         FromPort: 80
         ToPort: 80
         CidrIp: 0.0.0.0/0
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 80
+          ToPort: 80
+          IpProtocol: tcp
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          ToPort: 22
+          IpProtocol: tcp
 
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -31,8 +40,12 @@ Resources:
         SourceSecurityGroupId: !Ref LoadBalancerSecurityGroup
       SecurityGroupEgress:
       - IpProtocol: tcp
-        FromPort: 0
-        ToPort: 65535
+        FromPort: 80
+        ToPort: 80
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
         CidrIp: 0.0.0.0/0
 
   WebAppLaunchTemplate:
